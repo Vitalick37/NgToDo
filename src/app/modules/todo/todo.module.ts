@@ -11,6 +11,7 @@ import { TodoCreateFormUiComponent } from './ui/todo-create-form-ui/todo-create-
 import { TodoListUiComponent } from './ui/todo-list-ui/todo-list-ui.component';
 import { TodoListItemUiComponent } from './ui/todo-list-item-ui/todo-list-item-ui.component';
 import { TodoListItemEditUiComponent } from './ui/todo-list-item-edit-ui/todo-list-item-edit-ui.component';
+import { TodoSyncStorageService } from './service/todo-sync-storage.service';
 
 
 
@@ -28,6 +29,7 @@ import { TodoListItemEditUiComponent } from './ui/todo-list-item-edit-ui/todo-li
     StoreModule.forFeature(TODO_REDUCER_NODE, todoReducer),
     TodoRoutingModule,
     FormsModule
-  ]
+  ],
+  providers: [TodoSyncStorageService],
 })
 export class TodoModule { }
